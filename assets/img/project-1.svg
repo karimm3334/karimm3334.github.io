@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Navigation and path-planning motif">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#12161d"/>
+      <stop offset="1" stop-color="#0b0e13"/>
+    </linearGradient>
+    <pattern id="grid1" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#20272f" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg1)"/>
+  <rect width="1600" height="900" fill="url(#grid1)"/>
+
+  <!-- planned path -->
+  <path d="M240 700 C 480 620, 560 380, 820 420 S 1180 300, 1360 220"
+        fill="none" stroke="#e08a53" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 22" opacity="0.9"/>
+  <g fill="#e08a53">
+    <circle cx="240" cy="700" r="9" opacity="0.6"/>
+    <circle cx="820" cy="420" r="9" opacity="0.6"/>
+    <circle cx="1360" cy="220" r="12"/>
+  </g>
+  <!-- goal marker -->
+  <g stroke="#e08a53" stroke-width="4" fill="none">
+    <circle cx="1360" cy="220" r="26" opacity="0.5"/>
+  </g>
+  <!-- robot pose -->
+  <g transform="translate(240 700) rotate(-28)">
+    <path d="M-22 -18 L26 0 L-22 18 Z" fill="#e8eaee"/>
+  </g>
+
+</svg>

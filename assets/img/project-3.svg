@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="SLAM localization and mapping motif">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#12161d"/>
+      <stop offset="1" stop-color="#0b0e13"/>
+    </linearGradient>
+    <pattern id="grid3" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#1f262e" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg3)"/>
+  <rect width="1600" height="900" fill="url(#grid3)"/>
+
+  <!-- occupancy-map walls -->
+  <g stroke="#333c46" stroke-width="10" fill="none" stroke-linecap="round">
+    <path d="M360 250 H1240 V650 H360 Z"/>
+    <path d="M700 250 V430 M700 520 V650 M1000 430 H1240"/>
+  </g>
+
+  <!-- SLAM trajectory (loop) -->
+  <path d="M520 560 C 520 360, 760 340, 900 360 S 1120 520, 980 580 S 640 620, 520 560 Z"
+        fill="none" stroke="#e08a53" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- pose keyframes -->
+  <g fill="#e08a53">
+    <circle cx="520" cy="560" r="8"/><circle cx="620" cy="380" r="8"/><circle cx="820" cy="352" r="8"/>
+    <circle cx="980" cy="470" r="8"/><circle cx="860" cy="592" r="8"/><circle cx="640" cy="612" r="8"/>
+  </g>
+  <!-- loop-closure link -->
+  <path d="M520 560 L 640 612" stroke="#edb488" stroke-width="3" stroke-dasharray="6 8"/>
+
+  <!-- current robot pose -->
+  <g transform="translate(820 352) rotate(10)">
+    <path d="M-20 -16 L24 0 L-20 16 Z" fill="#e8eaee"/>
+  </g>
+
+</svg>

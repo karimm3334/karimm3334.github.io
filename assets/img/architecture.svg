@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" role="img" aria-label="Autonomy pipeline: sensors to perception to localization to planning to control">
+  <defs>
+    <linearGradient id="abg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#231c16"/>
+      <stop offset="1" stop-color="#140f0b"/>
+    </linearGradient>
+    <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#e08a53"/>
+    </marker>
+    <style>
+      .box { fill: #161b23; stroke: #2a323c; stroke-width: 2; }
+      .lbl { font-family: ui-monospace, Menlo, Consolas, monospace; fill: #e8eaee; font-size: 26px; }
+      .sub { font-family: ui-monospace, Menlo, Consolas, monospace; fill: #9aa1ad; font-size: 17px; }
+      .flow { stroke: #e08a53; stroke-width: 3; fill: none; }
+    </style>
+  </defs>
+  <rect width="1600" height="760" fill="url(#abg)"/>
+
+  <!-- pipeline boxes -->
+  <g>
+    <rect class="box" x="70"   y="300" width="250" height="150" rx="14"/>
+    <rect class="box" x="410"  y="300" width="250" height="150" rx="14"/>
+    <rect class="box" x="750"  y="300" width="250" height="150" rx="14"/>
+    <rect class="box" x="1090" y="300" width="250" height="150" rx="14"/>
+    <rect class="box" x="1300" y="120" width="230" height="120" rx="14"/>
+  </g>
+
+  <!-- flow arrows -->
+  <g class="flow">
+    <path d="M320 375 H410" marker-end="url(#arw)"/>
+    <path d="M660 375 H750" marker-end="url(#arw)"/>
+    <path d="M1000 375 H1090" marker-end="url(#arw)"/>
+    <path d="M1340 375 H1470 V240" marker-end="url(#arw)"/>
+  </g>
+
+  <!-- labels -->
+  <g text-anchor="middle">
+    <text class="lbl" x="195"  y="368">Sensors</text>
+    <text class="sub" x="195"  y="400">LiDAR · depth · IMU</text>
+    <text class="lbl" x="535"  y="368">Perception</text>
+    <text class="sub" x="535"  y="400">PCL · Open3D · CV</text>
+    <text class="lbl" x="875"  y="368">Localization</text>
+    <text class="sub" x="875"  y="400">SLAM · fusion</text>
+    <text class="lbl" x="1215" y="368">Planning</text>
+    <text class="sub" x="1215" y="400">global · local</text>
+    <text class="lbl" x="1415" y="185">Control</text>
+    <text class="sub" x="1415" y="215">actuation</text>
+  </g>
+
+</svg>
